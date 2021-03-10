@@ -1,8 +1,9 @@
 package com.sideslip.view;
 
 /**
- * created by wyu on 2017/8/11.
+ * created by wyu on 2021/3/8.
  */
+
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -16,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class SlideLayout extends HorizontalScrollView {
 
 
-    private int mLeftMenuWidth=0;
+    private int mLeftMenuWidth = 0;
     private int mRightMenuWidth;
     private boolean isOpen;
 

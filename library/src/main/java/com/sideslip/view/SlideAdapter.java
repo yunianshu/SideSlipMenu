@@ -20,12 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * created by yhao on 2017/9/8.
- * <p>
- * viewType:
- * item: 1-99
- * header:101-199
- * footer:201-299
+ * created by wyu on 2021/3/7.
  */
 
 

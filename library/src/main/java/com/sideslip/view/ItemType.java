@@ -2,9 +2,11 @@ package com.sideslip.view;
 
 import com.sideslip.face.IItemType;
 
+
 /**
- * created by yhao on 2017/9/9.
+ * created by wyu on 2021/3/6.
  */
+
 
 
 public abstract class ItemType<T> implements IItemType {

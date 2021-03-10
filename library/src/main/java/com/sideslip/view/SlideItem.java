@@ -1,8 +1,9 @@
 package com.sideslip.view;
 
 /**
- * created by yhao on 2017/9/13.
+ * created by wyu on 2021/3/7.
  */
+
 
 
  class SlideItem {
