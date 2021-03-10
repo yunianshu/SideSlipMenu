@@ -15,8 +15,8 @@ import com.sideslip.view.SlideAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    val data: MutableList<DataBean> = ArrayList<DataBean>()
-    val data2: MutableList<DataBean> = ArrayList<DataBean>()
+    val data: MutableList<DataBean> = arrayListOf()
+    val data2: MutableList<DataBean> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        SlideAdapter.load(data)
+        SlideAdapter.load(data.toMutableList())
             .item(R.layout.item1)
             .item(R.layout.item, 0, 0f, R.layout.menu, 1.0f)
             .type(object : ItemType<DataBean>() {
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
                             e.printStackTrace()
                         }
                         runOnUiThread {
-                            slideAdapter.loadMore(data2)
+                            slideAdapter.loadMore(data2.toMutableList())
                             footer.setText(R.id.footerText, "正在加载")
                         }
                     }.start()
