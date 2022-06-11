@@ -167,12 +167,17 @@ class SlideAdapter private constructor(build: Builder?, recyclerView: RecyclerVi
     }
 
     private fun onBottom() {
-        if (mBottomListener != null) {
+        if (mBottomListener != null && mBottomFooter != null) {
             if (!mLoading) {
                 mLoading = true
                 mBottomListener.onBottom(mBottomFooter!!, this@SlideAdapter)
             }
         }
+    }
+
+    fun delete(position: Int) {
+        mData!!.removeAt(position - headerNum)
+        notifyItemRemoved(position)
     }
 
     fun loadMore(data: MutableList<Any>) {
