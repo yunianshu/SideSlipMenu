@@ -191,7 +191,6 @@ class SlideAdapter private constructor(build: Builder?, recyclerView: RecyclerVi
     }
 
     private fun init() {
-        mRecycleView.adapter = this
         mRecycleView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
@@ -337,6 +336,7 @@ class SlideAdapter private constructor(build: Builder?, recyclerView: RecyclerVi
 
         fun into(recyclerView: RecyclerView): SlideAdapter {
             val adapter = SlideAdapter(mBuilder, recyclerView)
+            recyclerView.adapter = adapter
             mBuilder = null
             return adapter
         }
