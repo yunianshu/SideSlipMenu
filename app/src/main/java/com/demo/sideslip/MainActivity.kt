@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
 
         SlideAdapter.load(data.toMutableList())
             .item(R.layout.item1)
-            .item(R.layout.item, 0, 0f, R.layout.menu, 1.0f)
+            .item(R.layout.item, 0, 0f, R.layout.menu, 0.5f)
             .type(object : ItemType<DataBean>() {
                 override fun getItemOrder(data: DataBean, position: Int): Int {
                     return if (position % 2 == 0) 1 else 2
